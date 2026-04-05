@@ -1,0 +1,16 @@
+.footer {
+  background-color: var(--color-maroon);
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  font-family: 'Oxanium', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-cream);
+  letter-spacing: 0.04em;
+  font-style: italic;
+}

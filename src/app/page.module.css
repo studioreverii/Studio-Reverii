@@ -1,0 +1,176 @@
+.page {
+  animation: fadeUp 0.7s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.heroWordmark {
+  font-family: 'Azonix', sans-serif;
+  font-size: 48px;
+  color: var(--color-sage);
+  letter-spacing: 0.15em;
+  font-weight: normal;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.heroImageContainer {
+  position: relative;
+  margin-left: -40px;
+}
+
+.decorativeSquarePink {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  background-color: var(--color-pink);
+  z-index: 1;
+}
+
+.decorativeSquareSage {
+  position: absolute;
+  bottom: -10px;
+  left: -10px;
+  width: 20px;
+  height: 20px;
+  background-color: var(--color-sage);
+  z-index: 1;
+}
+
+.heroImage {
+  width: 500px;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Tagline */
+.taglineSection {
+  margin-top: 120px;
+}
+
+.taglineRow {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.ruleLeft {
+  flex: 0 0 30%;
+  height: 1px;
+  background-color: rgba(122, 139, 111, 0.4);
+}
+
+.ruleRight {
+  flex: 1;
+  height: 1px;
+  background-color: rgba(122, 139, 111, 0.4);
+}
+
+.taglineText {
+  flex-shrink: 0;
+}
+
+.taglineText p {
+  font-family: 'Oxanium', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--color-maroon);
+  letter-spacing: 0.04em;
+  line-height: 1.6;
+  white-space: nowrap;
+}
+
+/* Projects preview */
+.preview {
+  margin-top: 80px;
+}
+
+.previewLabel {
+  font-family: 'Oxanium', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-sage);
+  letter-spacing: 0.06em;
+  display: block;
+  margin-bottom: 24px;
+}
+
+.previewGrid {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.previewItem {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-decoration: none;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.previewItem:hover {
+  opacity: 0.85;
+  transform: scale(1.02);
+}
+
+.previewImage {
+  width: 160px;
+  height: 110px;
+  object-fit: cover;
+  display: block;
+}
+
+.previewTitle {
+  font-family: 'Oxanium', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--color-sage);
+  letter-spacing: 0.06em;
+}
+
+@media (max-width: 699px) {
+  .heroWordmark {
+    font-size: 28px;
+  }
+
+  .heroImage {
+    width: 100%;
+  }
+
+  .heroImageContainer {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .taglineText p {
+    font-size: 15px;
+    white-space: normal;
+  }
+
+  .ruleLeft {
+    flex: 0 0 10%;
+  }
+}
