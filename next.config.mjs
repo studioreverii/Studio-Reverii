@@ -1,7 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
+  basePath: '/Studio-Reverii',
   images: {
-    remotePatterns: [],
+    unoptimized: true,
   },
 };
 
