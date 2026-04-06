@@ -13,7 +13,7 @@ export default function ContactPage() {
 
   return (
     <div className={styles.page}>
-      <h1 className={styles.title}>CONTACT</h1>
+      <h1 className={styles.title}>Contact</h1>
 
       {submitted ? (
         <div className={styles.confirmation}>

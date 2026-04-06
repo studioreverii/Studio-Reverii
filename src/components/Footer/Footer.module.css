@@ -7,10 +7,10 @@
 }
 
 .text {
-  font-family: 'Oxanium', sans-serif;
+  font-family: var(--font-body);
   font-size: 12px;
   font-weight: 400;
-  color: var(--color-cream);
-  letter-spacing: 0.04em;
   font-style: italic;
+  color: var(--color-offwhite);
+  letter-spacing: 0.04em;
 }

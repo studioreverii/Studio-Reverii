@@ -1,21 +1,22 @@
 @font-face {
-  font-family: 'Azonix';
-  src: url('/fonts/Azonix.otf') format('opentype');
+  font-family: 'Bodoni 72 Smallcaps';
+  src: url('/Studio-Reverii/fonts/Bodoni72Smallcaps.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 :root {
-  --color-cream:  #F0EDE6;
-  --color-pink:   #E8A0A8;
-  --color-sage:   #7A8B6F;
-  --color-teal:   #2D6B50;
-  --color-maroon: #1A0A10;
-  --color-white:  #FAFAF7;
+  --color-offwhite:  #F5F2EC;
+  --color-lightgrey: #C9C3BC;
+  --color-taupe:     #A89E8C;
+  --color-mauve:     #AA7A8E;
+  --color-maroon:    #1E0A14;
+
+  --font-display: 'Bodoni 72 Smallcaps', 'Bodoni Moda', 'Didot', 'Georgia', serif;
+  --font-body: 'Cochin', 'Palatino Linotype', 'Palatino', 'Book Antiqua', Georgia, serif;
 
   --sidebar-width: 120px;
-  --font-azonix: 'Azonix', sans-serif;
 }
 
 *,
@@ -31,11 +32,11 @@ html {
 }
 
 body {
-  background-color: var(--color-cream);
+  background-color: var(--color-offwhite);
   color: var(--color-maroon);
-  font-family: 'Oxanium', sans-serif;
+  font-family: var(--font-body);
   font-weight: 400;
-  line-height: 1.7;
+  line-height: 1.75;
   letter-spacing: 0.04em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

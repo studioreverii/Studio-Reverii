@@ -3,7 +3,7 @@
   align-items: center;
   gap: 32px;
   padding: 24px 0;
-  border-bottom: 1px solid rgba(122, 139, 111, 0.2);
+  border-bottom: 1px solid rgba(201, 195, 188, 0.6);
   text-decoration: none;
   color: inherit;
   opacity: 0;
@@ -47,31 +47,32 @@
 }
 
 .title {
-  font-family: 'Oxanium', sans-serif;
+  font-family: var(--font-body);
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--color-maroon);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.12em;
   transition: color 0.3s ease;
 }
 
 .card:hover .title {
-  color: var(--color-teal);
+  color: var(--color-mauve);
 }
 
 .year {
-  font-family: 'Oxanium', sans-serif;
+  font-family: var(--font-body);
   font-size: 12px;
   font-weight: 400;
-  color: var(--color-sage);
+  font-style: italic;
+  color: var(--color-taupe);
   letter-spacing: 0.06em;
 }
 
 .description {
-  font-family: 'Oxanium', sans-serif;
+  font-family: var(--font-body);
   font-size: 13px;
   font-weight: 400;
-  color: var(--color-sage);
+  color: var(--color-taupe);
   letter-spacing: 0.04em;
   line-height: 1.6;
 }

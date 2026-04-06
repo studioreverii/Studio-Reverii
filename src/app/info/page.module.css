@@ -14,11 +14,12 @@
 }
 
 .title {
-  font-family: 'Azonix', sans-serif;
-  font-size: 24px;
-  font-weight: normal;
-  color: var(--color-sage);
-  letter-spacing: 0.15em;
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 400;
+  font-variant: small-caps;
+  color: var(--color-mauve);
+  letter-spacing: 0.08em;
   margin-bottom: 48px;
 }
 
@@ -37,26 +38,26 @@
 }
 
 .paragraph {
-  font-family: 'Oxanium', sans-serif;
+  font-family: var(--font-body);
   font-size: 14px;
   font-weight: 400;
   color: var(--color-maroon);
   letter-spacing: 0.04em;
-  line-height: 1.7;
+  line-height: 1.75;
 }
 
 .services {
   margin-top: 16px;
   padding-top: 24px;
-  border-top: 1px solid rgba(122, 139, 111, 0.3);
+  border-top: 1px solid rgba(168, 158, 140, 0.4);
 }
 
 .servicesTitle {
-  font-family: 'Oxanium', sans-serif;
+  font-family: var(--font-body);
   font-size: 13px;
-  font-weight: 600;
-  color: var(--color-sage);
-  letter-spacing: 0.08em;
+  font-weight: 700;
+  color: var(--color-taupe);
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   margin-bottom: 16px;
 }
@@ -69,7 +70,7 @@
 }
 
 .servicesList li {
-  font-family: 'Oxanium', sans-serif;
+  font-family: var(--font-body);
   font-size: 13px;
   font-weight: 400;
   color: var(--color-maroon);
@@ -86,17 +87,13 @@
   transform: translateY(-50%);
   width: 4px;
   height: 4px;
-  background-color: var(--color-sage);
+  background-color: var(--color-taupe);
   opacity: 0.6;
 }
 
 .imageColumn {
   flex-shrink: 0;
   margin-top: 40px;
-}
-
-.imageWrapper {
-  position: relative;
 }
 
 .image {

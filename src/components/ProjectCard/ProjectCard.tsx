@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Project } from '@/data/projects';
+import { Project, imgPath } from '@/data/projects';
 import styles from './ProjectCard.module.css';
 
 interface ProjectCardProps {
@@ -17,12 +17,11 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
     >
       <div className={styles.imageWrapper}>
         <Image
-          src={project.coverImage}
+          src={imgPath(project.slug, project.coverImage)}
           alt={project.title}
           width={200}
           height={130}
           className={styles.image}
-          unoptimized
         />
       </div>
       <div className={styles.info}>

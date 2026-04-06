@@ -14,11 +14,12 @@
 }
 
 .title {
-  font-family: 'Azonix', sans-serif;
-  font-size: 24px;
-  font-weight: normal;
-  color: var(--color-sage);
-  letter-spacing: 0.15em;
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 400;
+  font-variant: small-caps;
+  color: var(--color-mauve);
+  letter-spacing: 0.08em;
   margin-bottom: 40px;
 }
 
@@ -28,5 +29,5 @@
 }
 
 .list > :first-child {
-  border-top: 1px solid rgba(122, 139, 111, 0.2);
+  border-top: 1px solid rgba(201, 195, 188, 0.6);
 }

@@ -7,11 +7,13 @@ export const metadata = {
 };
 
 export default function ProjectsPage() {
+  const sorted = [...projects].sort((a, b) => a.order - b.order);
+
   return (
     <div className={styles.page}>
-      <h1 className={styles.title}>PROJECTS</h1>
+      <h1 className={styles.title}>Projects</h1>
       <div className={styles.list}>
-        {projects.map((project, index) => (
+        {sorted.map((project, index) => (
           <ProjectCard key={project.slug} project={project} index={index} />
         ))}
       </div>

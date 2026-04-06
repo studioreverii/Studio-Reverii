@@ -15,16 +15,17 @@
 }
 
 .title {
-  font-family: 'Azonix', sans-serif;
-  font-size: 24px;
-  font-weight: normal;
-  color: var(--color-sage);
-  letter-spacing: 0.15em;
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 400;
+  font-variant: small-caps;
+  color: var(--color-mauve);
+  letter-spacing: 0.08em;
   margin-bottom: 32px;
 }
 
 .intro {
-  font-family: 'Oxanium', sans-serif;
+  font-family: var(--font-body);
   font-size: 18px;
   font-weight: 400;
   font-style: italic;
@@ -46,24 +47,24 @@
 }
 
 .label {
-  font-family: 'Oxanium', sans-serif;
+  font-family: var(--font-body);
   font-size: 11px;
-  font-weight: 600;
-  color: var(--color-sage);
-  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--color-taupe);
+  letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
 .input,
 .select,
 .textarea {
-  font-family: 'Oxanium', sans-serif;
+  font-family: var(--font-body);
   font-size: 14px;
   font-weight: 400;
   color: var(--color-maroon);
   background: transparent;
   border: none;
-  border-bottom: 1px solid var(--color-sage);
+  border-bottom: 1px solid var(--color-taupe);
   outline: none;
   padding: 8px 0;
   letter-spacing: 0.04em;
@@ -77,13 +78,13 @@
 .input:focus,
 .select:focus,
 .textarea:focus {
-  border-bottom-color: var(--color-teal);
+  border-bottom-color: var(--color-mauve);
 }
 
 .textarea {
   resize: vertical;
   min-height: 120px;
-  line-height: 1.7;
+  line-height: 1.75;
 }
 
 .select {
@@ -92,21 +93,21 @@
 
 .submitBtn {
   align-self: flex-start;
-  font-family: 'Oxanium', sans-serif;
+  font-family: var(--font-body);
   font-size: 14px;
-  font-weight: 600;
-  color: var(--color-cream);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--color-offwhite);
   background-color: var(--color-maroon);
   border: none;
   border-radius: 0;
   padding: 10px 28px;
-  letter-spacing: 0.06em;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .submitBtn:hover {
-  background-color: var(--color-teal);
+  background-color: var(--color-mauve);
 }
 
 /* Confirmation */
@@ -115,7 +116,7 @@
 }
 
 .confirmationText {
-  font-family: 'Oxanium', sans-serif;
+  font-family: var(--font-body);
   font-size: 18px;
   font-weight: 400;
   font-style: italic;

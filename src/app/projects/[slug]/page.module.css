@@ -13,26 +13,27 @@
   }
 }
 
-/* Header — top right */
+/* Header */
 .header {
   text-align: right;
   margin-bottom: 48px;
 }
 
 .title {
-  font-family: 'Azonix', sans-serif;
-  font-size: 20px;
-  font-weight: normal;
-  color: var(--color-sage);
-  letter-spacing: 0.15em;
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 400;
+  font-variant: small-caps;
+  color: var(--color-mauve);
+  letter-spacing: 0.08em;
 }
 
 .subtitle {
-  font-family: 'Oxanium', sans-serif;
+  font-family: var(--font-body);
   font-size: 12px;
   font-weight: 400;
-  color: var(--color-sage);
   font-style: italic;
+  color: var(--color-taupe);
   letter-spacing: 0.04em;
   margin-top: 4px;
 }
@@ -47,43 +48,35 @@
 }
 
 .narrativePara {
-  font-family: 'Oxanium', sans-serif;
+  font-family: var(--font-body);
   font-size: 14px;
   font-weight: 400;
   color: var(--color-maroon);
   letter-spacing: 0.04em;
-  line-height: 1.7;
+  line-height: 1.75;
 }
 
 /* Images */
 .imagesSection {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
   width: 100%;
 }
 
 .imageWrapper {
-  position: relative;
   width: 100%;
-}
-
-.decorativeSquare {
-  position: absolute;
-  top: -10px;
-  right: 40px;
-  width: 20px;
-  height: 20px;
-  background-color: var(--color-pink);
-  z-index: 1;
+  cursor: pointer;
+  position: relative;
 }
 
 .image {
-  width: 100%;
-  height: auto;
   display: block;
-  object-fit: cover;
-  transition: opacity 0.6s ease;
+  transition: opacity 0.3s ease;
+}
+
+.imageWrapper:hover .image {
+  opacity: 0.95;
 }
 
 /* Credits */
@@ -104,23 +97,24 @@
   display: flex;
   gap: 8px;
   justify-content: flex-end;
+  align-items: baseline;
 }
 
 .creditLabel {
-  font-family: 'Oxanium', sans-serif;
+  font-family: var(--font-body);
   font-size: 12px;
-  font-weight: 400;
-  color: var(--color-sage);
-  letter-spacing: 0.08em;
+  font-weight: 700;
+  color: var(--color-taupe);
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  font-style: normal;
 }
 
 .creditValue {
-  font-family: 'Oxanium', sans-serif;
+  font-family: var(--font-body);
   font-size: 12px;
   font-weight: 400;
-  color: var(--color-sage);
+  font-style: italic;
+  color: var(--color-taupe);
   letter-spacing: 0.04em;
 }
 

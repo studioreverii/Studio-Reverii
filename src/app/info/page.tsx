@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { projects } from '@/data/projects';
+import { projects, imgPath } from '@/data/projects';
 import styles from './page.module.css';
 
 export const metadata = {
@@ -7,28 +7,28 @@ export const metadata = {
 };
 
 export default function InfoPage() {
+  const featured = projects.find((p) => p.slug === 'bluebird') ?? projects[0];
+
   return (
     <div className={styles.page}>
-      <h1 className={styles.title}>INFO</h1>
+      <h1 className={styles.title}>Info</h1>
 
       <div className={styles.layout}>
         <div className={styles.textColumn}>
           <p className={styles.paragraph}>
-            Studio Reverii is a creative studio built on the belief that photography is worldbuilding.
-            Every project begins with a question: what world does this image belong to? We work backward
-            from that question — sculpting atmosphere, narrative, and visual language before a single
-            frame is captured.
+            Studio Reverii is a creative studio where photography and narrative meet.
+            We don&apos;t document moments — we build worlds. Every project begins with
+            a story, and every image is a scene within it.
           </p>
           <p className={styles.paragraph}>
-            Our process is narrative-first. We collaborate closely with brands, artists, and individuals
-            who understand that the best images are not taken — they are made. Every detail is intentional.
-            Every shadow earns its place. We are not a production house; we are a world-building studio
-            that happens to speak in photographs.
+            Based between London and Shanghai, we work across fashion editorial,
+            brand campaigns, and art direction. Our process is narrative-first —
+            sculpting atmosphere and visual language before a single frame is captured.
           </p>
           <p className={styles.paragraph}>
-            Based between cities and light sources, Studio Reverii is led by Ki (creative direction)
-            and Olivia (photography). We take on a limited number of projects each season to ensure
-            the depth each world deserves.
+            Studio Reverii is led by Ki (creative direction) and Olivia (photography).
+            We take on a limited number of projects each season to ensure the depth
+            each world deserves.
           </p>
 
           <div className={styles.services}>
@@ -44,16 +44,13 @@ export default function InfoPage() {
         </div>
 
         <div className={styles.imageColumn}>
-          <div className={styles.imageWrapper}>
-            <Image
-              src={projects[0].coverImage}
-              alt="Studio Reverii at work"
-              width={380}
-              height={500}
-              className={styles.image}
-              unoptimized
-            />
-          </div>
+          <Image
+            src={imgPath(featured.slug, featured.coverImage)}
+            alt="Studio Reverii at work"
+            width={380}
+            height={500}
+            className={styles.image}
+          />
         </div>
       </div>
     </div>

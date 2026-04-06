@@ -22,11 +22,12 @@
 }
 
 .heroWordmark {
-  font-family: 'Azonix', sans-serif;
-  font-size: 48px;
-  color: var(--color-sage);
-  letter-spacing: 0.15em;
-  font-weight: normal;
+  font-family: var(--font-display);
+  font-size: 52px;
+  font-variant: small-caps;
+  color: var(--color-mauve);
+  letter-spacing: 0.08em;
+  font-weight: 400;
   text-align: center;
   margin-bottom: 48px;
 }
@@ -36,23 +37,25 @@
   margin-left: -40px;
 }
 
-.decorativeSquarePink {
+.decorativeSquareMauve {
   position: absolute;
   top: -10px;
   right: -10px;
   width: 20px;
   height: 20px;
-  background-color: var(--color-pink);
+  background-color: var(--color-mauve);
+  opacity: 0.6;
   z-index: 1;
 }
 
-.decorativeSquareSage {
+.decorativeSquareTaupe {
   position: absolute;
   bottom: -10px;
   left: -10px;
   width: 20px;
   height: 20px;
-  background-color: var(--color-sage);
+  background-color: var(--color-taupe);
+  opacity: 0.5;
   z-index: 1;
 }
 
@@ -77,13 +80,13 @@
 .ruleLeft {
   flex: 0 0 30%;
   height: 1px;
-  background-color: rgba(122, 139, 111, 0.4);
+  background-color: rgba(168, 158, 140, 0.4);
 }
 
 .ruleRight {
   flex: 1;
   height: 1px;
-  background-color: rgba(122, 139, 111, 0.4);
+  background-color: rgba(168, 158, 140, 0.4);
 }
 
 .taglineText {
@@ -91,7 +94,7 @@
 }
 
 .taglineText p {
-  font-family: 'Oxanium', sans-serif;
+  font-family: var(--font-body);
   font-size: 18px;
   font-weight: 400;
   font-style: italic;
@@ -107,11 +110,11 @@
 }
 
 .previewLabel {
-  font-family: 'Oxanium', sans-serif;
+  font-family: var(--font-body);
   font-size: 13px;
-  font-weight: 600;
-  color: var(--color-sage);
-  letter-spacing: 0.06em;
+  font-weight: 700;
+  color: var(--color-taupe);
+  letter-spacing: 0.12em;
   display: block;
   margin-bottom: 24px;
 }
@@ -144,16 +147,17 @@
 }
 
 .previewTitle {
-  font-family: 'Oxanium', sans-serif;
+  font-family: var(--font-body);
   font-size: 11px;
   font-weight: 400;
-  color: var(--color-sage);
+  font-style: italic;
+  color: var(--color-taupe);
   letter-spacing: 0.06em;
 }
 
 @media (max-width: 699px) {
   .heroWordmark {
-    font-size: 28px;
+    font-size: 32px;
   }
 
   .heroImage {
