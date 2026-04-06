@@ -12,8 +12,6 @@ interface LightboxProps {
   onNext: () => void;
 }
 
-const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || '';
-
 export default function Lightbox({
   images,
   currentIndex,
@@ -45,7 +43,7 @@ export default function Lightbox({
     <div className={styles.overlay} onClick={onClose}>
       <div className={styles.controls}>
         <a
-          href={`${BASE_PATH}${src}`}
+          href={src}
           download
           className={styles.controlBtn}
           onClick={(e) => e.stopPropagation()}

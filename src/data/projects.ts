@@ -24,7 +24,8 @@ export interface Project {
 }
 
 export function imgPath(slug: string, filename: string): string {
-  return `/images/${slug}/${filename}`;
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+  return `${basePath}/images/${slug}/${filename}`;
 }
 
 export const projects: Project[] = [
@@ -44,7 +45,6 @@ export const projects: Project[] = [
       'bluebird-03.jpeg',
       'bluebird-04.jpeg',
       'bluebird-05.jpeg',
-      'bluebird-06.png',
     ],
     coverImage: 'bluebird-02.jpeg',
     aspectRatio: '16/9',
