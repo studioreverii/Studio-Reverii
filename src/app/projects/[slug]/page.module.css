@@ -1,11 +1,11 @@
 .page {
-  animation: fadeUp 0.7s ease forwards;
+  animation: fadeUp 0.8s ease forwards;
 }
 
 @keyframes fadeUp {
   from {
     opacity: 0;
-    transform: translateY(12px);
+    transform: translateY(14px);
   }
   to {
     opacity: 1;
@@ -13,7 +13,7 @@
   }
 }
 
-/* Header */
+/* ── Header ─────────────────────────────────────── */
 .header {
   text-align: right;
   margin-bottom: 48px;
@@ -21,7 +21,7 @@
 
 .title {
   font-family: var(--font-display);
-  font-size: 22px;
+  font-size: clamp(18px, 2.2vw, 24px);
   font-weight: 400;
   font-variant: small-caps;
   color: var(--color-mauve);
@@ -38,10 +38,10 @@
   margin-top: 4px;
 }
 
-/* Narrative */
+/* ── Narrative ──────────────────────────────────── */
 .narrativeSection {
-  max-width: 420px;
-  margin-bottom: 48px;
+  max-width: 480px;
+  margin-bottom: 56px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -53,14 +53,14 @@
   font-weight: 400;
   color: var(--color-maroon);
   letter-spacing: 0.04em;
-  line-height: 1.75;
+  line-height: 1.8;
 }
 
-/* Images */
+/* ── Images ─────────────────────────────────────── */
 .imagesSection {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 24px;
   width: 100%;
 }
 
@@ -68,23 +68,25 @@
   width: 100%;
   cursor: pointer;
   position: relative;
+  overflow: hidden;
 }
 
 .image {
   display: block;
-  transition: opacity 0.3s ease;
+  transition: transform 0.6s ease, opacity 0.4s ease;
 }
 
 .imageWrapper:hover .image {
   opacity: 0.95;
+  transform: scale(1.01);
 }
 
-/* Credits */
+/* ── Credits ─────────────────────────────────────── */
 .credits {
-  margin-top: 64px;
+  margin-top: 72px;
   display: flex;
   justify-content: flex-end;
-  padding-bottom: 40px;
+  padding-bottom: 48px;
 }
 
 .creditsList {
@@ -95,14 +97,14 @@
 
 .creditRow {
   display: flex;
-  gap: 8px;
+  gap: 10px;
   justify-content: flex-end;
   align-items: baseline;
 }
 
 .creditLabel {
   font-family: var(--font-body);
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 700;
   color: var(--color-taupe);
   letter-spacing: 0.12em;
@@ -118,8 +120,29 @@
   letter-spacing: 0.04em;
 }
 
+/* ── Tablet ─────────────────────────────────────── */
+@media (max-width: 899px) {
+  .narrativeSection {
+    max-width: 100%;
+  }
+}
+
+/* ── Mobile ─────────────────────────────────────── */
 @media (max-width: 699px) {
   .header {
     text-align: left;
+  }
+
+  .credits {
+    justify-content: flex-start;
+    margin-top: 48px;
+  }
+
+  .creditRow {
+    justify-content: flex-start;
+  }
+
+  .imagesSection {
+    gap: 16px;
   }
 }

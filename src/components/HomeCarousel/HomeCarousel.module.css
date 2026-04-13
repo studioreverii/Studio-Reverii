@@ -1,0 +1,133 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 860px;
+  margin-top: 40px;
+  user-select: none;
+}
+
+/* Decorative semi-transparent blocks */
+.decorativeMauve {
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  width: 28px;
+  height: 28px;
+  background-color: var(--color-mauve);
+  opacity: 0.55;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.decorativeTaupe {
+  position: absolute;
+  bottom: 48px;
+  left: -14px;
+  width: 20px;
+  height: 20px;
+  background-color: var(--color-taupe);
+  opacity: 0.4;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Image frame — cinematic 16:9 */
+.frame {
+  display: block;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.slide {
+  object-fit: cover;
+  transition: opacity 1s ease;
+}
+
+.slideVisible {
+  opacity: 1;
+}
+
+.slideHidden {
+  opacity: 0;
+}
+
+/* Footer row: title left, dots right */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 14px;
+  padding: 0 2px;
+}
+
+.caption {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--color-taupe);
+  letter-spacing: 0.08em;
+}
+
+.dots {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+}
+
+.dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--color-lightgrey);
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 0.35s ease, transform 0.35s ease;
+}
+
+.dotActive {
+  background-color: var(--color-mauve);
+  transform: scale(1.4);
+}
+
+/* ── Tablet (600–899px) ─────────────────────────── */
+@media (max-width: 899px) {
+  .wrapper {
+    max-width: 100%;
+    margin-top: 28px;
+  }
+
+  .decorativeMauve {
+    top: -10px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .decorativeTaupe {
+    bottom: 44px;
+    left: -10px;
+    width: 14px;
+    height: 14px;
+  }
+}
+
+/* ── Mobile (<600px) ────────────────────────────── */
+@media (max-width: 599px) {
+  .wrapper {
+    margin-top: 20px;
+  }
+
+  /* Slightly taller crop on small screens for more dramatic feel */
+  .frame {
+    aspect-ratio: 4 / 3;
+  }
+
+  .caption {
+    font-size: 10px;
+  }
+}

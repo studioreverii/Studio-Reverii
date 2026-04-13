@@ -11,6 +11,14 @@ export default function ProjectDetail({ project }: { project: Project }) {
 
   const imagePaths = project.images.map((f) => imgPath(project.slug, f));
 
+  // Cinematic proportions: match intrinsic hint to actual image dimensions
+  const imgDimensions =
+    project.aspectRatio === '16/9'
+      ? { width: 1920, height: 1080 }
+      : project.aspectRatio === '1/1'
+      ? { width: 1080, height: 1080 }
+      : { width: 1620, height: 1080 }; // mixed: 3:2 landscape baseline
+
   const openLightbox = (i: number) => setLightboxIndex(i);
   const closeLightbox = () => setLightboxIndex(null);
   const prevImage = useCallback(
@@ -60,8 +68,7 @@ export default function ProjectDetail({ project }: { project: Project }) {
             <Image
               src={src}
               alt={`${project.title} — image ${i + 1}`}
-              width={1200}
-              height={800}
+              {...imgDimensions}
               style={{ width: '100%', height: 'auto' }}
               className={styles.image}
             />

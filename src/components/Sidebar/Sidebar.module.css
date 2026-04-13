@@ -65,8 +65,17 @@
 
 .active {
   font-weight: 700;
-  border-left: 2px solid var(--color-mauve) !important;
   color: var(--color-mauve);
+  border-left: 2px solid transparent;
+}
+
+.active::before {
+  content: '';
+  position: absolute;
+  inset: -3px -6px -3px -8px;
+  background-color: var(--color-mauve);
+  opacity: 0.13;
+  z-index: -1;
 }
 
 .decorativeDot {
