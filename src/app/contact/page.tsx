@@ -1,3 +1,4 @@
+import ContactForm from './ContactForm';
 import styles from './page.module.css';
 
 export const metadata = {
@@ -10,17 +11,14 @@ export default function ContactPage() {
       <h1 className={styles.title}>Contact</h1>
 
       <p className={styles.intro}>
-        Available for commissions in London and Shanghai.
+        Available for commissions. Based in London and Shanghai.
       </p>
 
       <dl className={styles.links}>
         <div className={styles.linkRow}>
           <dt className={styles.linkLabel}>Mail</dt>
           <dd>
-            <a
-              href="mailto:studioreverii.co@gmail.com"
-              className={styles.linkValue}
-            >
+            <a href="mailto:studioreverii.co@gmail.com" className={styles.linkValue}>
               studioreverii.co@gmail.com
             </a>
           </dd>
@@ -43,10 +41,10 @@ export default function ContactPage() {
         </div>
       </dl>
 
-      <p className={styles.tagline}>
-        In the year 1850, Miss Dalia waited from summer until winter —
-        with what hopes, and in what suspense, it is not easy to express.
-      </p>
+      <div className={styles.formSection}>
+        <p className={styles.formHeading}>Send a message</p>
+        <ContactForm />
+      </div>
     </div>
   );
 }
